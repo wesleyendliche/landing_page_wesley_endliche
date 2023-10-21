@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Sacramento&display=swap');
+
+:root {
+    --dark-blue: #27374D;
+    --medium-blue: #526D82;
+    --light-blue: #9DB2BF;
+    --gray: #DDE6ED;
+    --title-font: 'Montserrat', sans-serif;
+    --cursive-font: 'Sacramento', cursive;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li a {
+    font-family: var(--cursive-font);
+    font-weight: 500;
+    font-size: 30px;
+    text-decoration: none;;
+    color: var(--gray);
+    padding: 20px 10px 15px 10px;
+}
+
+header ul li a:hover {
+    color: var(--light-blue);
+    transition: color .3s;
+}
+
+#main-link {
+    color: var(--dark-blueblue);
+    font-family: var(--title-font);
+    font-weight: 800;
+    background-color: var(--light-blue);
+}
+
+#main-link:hover {
+    color: var(--dark-blue);
+    background-color: var(--gray);
+    transition: background-color .3s;
+}
+
+.logo img{
+    height: 44px;
+    width: 100px;
+    margin: 10px 0 10px 20px;
+}
+
+header,
+.who-am-i {
+    background-color: var(--dark-blue);
+}
