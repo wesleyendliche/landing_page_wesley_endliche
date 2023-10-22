@@ -61,3 +61,47 @@ header,
 .who-am-i {
     background-color: var(--dark-blue);
 }
+
+.who-am-i {
+    display: flex;
+    align-items: center;
+    height: 605px;
+}
+
+.who-am-i #container-text {
+    margin-left: 20px;
+    color: var(--gray);
+}
+
+.who-am-i #container-text h2 {
+    font-family: var(--cursive-font);
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+
+.who-am-i #container-text p {
+    font-family: var(--title-font);
+    font-size: 20px;
+}
+
+#expand {
+    margin-top: 20px;
+    padding: 10px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 1px var(--dark-blue);
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+#expand:hover {
+    background-color: var(--gray);
+    transition: background-color .3s;
+}
+
+#myStory {
+    display: none;
+}
