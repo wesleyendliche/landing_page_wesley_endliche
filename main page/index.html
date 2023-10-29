@@ -7,7 +7,7 @@
     <title>Teacher Wes Endliche</title>
     <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
-    <script src="app.js"></script>
+    <script src="/app/app.js"></script>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
             <div id="container-text">
                 <h2>Nice to meet you</h2>
                 <p>Professor há mais de 10 anos, acredito que a educação de qualidade pode abrir portas e trazer oportunidades incríveis àqueles que se empenham nos estudos.</p>
-                <button type="button" id="expand">Conheça minha história</button>
+                <button onclick="expandText()" type="button" id="expand">Conheça minha história</button>
 
                 <div id="myStory">
                     <p>
@@ -65,8 +65,8 @@
 
         <section class="courses">
             <div class="container-cards">
-                <div class="card-course">
-                    <img src="" alt="" class="course-img">
+                <div class="card-course" id="card-1">
+                    <img src="/assets/images/basic-student-img.jpg" alt="" class="course-img">
                     <h3 class="course-name">Básico</h3>
                     <p class="course-text">Para os primeiros contatos com o idioma; Indicado para os que só estudaram inglês de escola regular e/ou fizeram aulas particulares por um curto período.</p>
                 </div>
@@ -74,8 +74,8 @@
             </div>
 
             <div class="container-cards">
-                <div class="card-course">
-                    <img src="" alt="" class="course-img">
+                <div class="card-course" id="card-2">
+                    <img src="/assets/images/intermediate-student-img.jpg" alt="" class="course-img">
                     <h3 class="course-name">Intermediário</h3>
                     <p class="course-text">Para quem já possui conhecimento básico, tem vocabulário suficiente para se apresentar, pedir uma refeição ou se hospedar em um hotel sem problemas, por exemplo. Aqui, iremos aprofundar os tópicos já vistos e estender ainda mais a capacidade de comunicação.</p>
                 </div>
@@ -83,8 +83,8 @@
             </div>
 
             <div class="container-cards">
-                <div class="card-course">
-                    <img src="" alt="" class="course-img">
+                <div class="card-course" id="card-3">
+                    <img src="/assets/images/advanced-student-img.jpg" alt="" class="course-img">
                     <h3 class="course-name">Avançado</h3>
                     <p class="course-text">Sabe se virar bem em diversas situações, consegue falar sobre seus assuntos preferidos, mas trava na hora de explicar conceitos mais complexos? Esse é o nível para você chegar ao patamar de fluência aonde poderá encarar praticamente qualquer desafio do idioma.</p>
                 </div>
@@ -92,8 +92,8 @@
             </div>
 
             <div class="container-cards">
-                <div class="card-course">
-                    <img src="" alt="" class="course-img">
+                <div class="card-course" id="card-4">
+                    <img src="/assets/images/business-student-img.jpg" alt="" class="course-img">
                     <h3 class="course-name">Business English</h3>
                     <p class="course-text">Seja para entrar no mercado, garantir uma promoção, participar de reuniões com empresários de qualquer parte do mundo, ou até mesmo para expandir sua marca para muitos países, o Business English é o módulo voltado para negócios que você precisa.</p>
                 </div>
