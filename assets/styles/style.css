@@ -114,8 +114,17 @@ header,
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
-    padding: 30px;
+    padding: 0 30px 60px 0;
     background-color: var(--medium-blue);
+}
+
+#courses-title {
+    background-color: var(--medium-blue);
+    font-family: var(--cursive-font);
+    font-size: 80px;
+    color: var(--gray);
+    text-align: center;
+    padding-top: 15px;
 }
 
 .card-course {
@@ -148,3 +157,48 @@ header,
     height: 200px;
     padding-bottom: 10px;
 }
+
+.sts-depo-container {
+    background-color: var(--light-blue);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#depo-title {
+    background-color: var(--light-blue);
+    font-family: var(--cursive-font);
+    font-size: 80px;
+    color: var(--gray);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.depo-picture {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--medium-blue);
+    margin: 20px 5px 10px 5px;
+}
+
+figure {
+    text-align: center;
+}
+
+figure figcaption {
+    font-size: 16px;
+    color: var(--dark-blue);
+    font-family: var(--title-font);
+    margin: 0;
+    text-align: center;
+}
+
+.depo-print {
+    margin: 15px 10px 15px 10px;
+    background-color: white;
+    border: 3px solid var(--medium-blue);
+    border-radius: 6px;
+}
+
