@@ -118,7 +118,7 @@ header,
     background-color: var(--medium-blue);
 }
 
-#courses-title {
+#courses-title, #contact-me-title {
     background-color: var(--medium-blue);
     font-family: var(--cursive-font);
     font-size: 80px;
@@ -202,3 +202,32 @@ figure figcaption {
     border-radius: 6px;
 }
 
+.contact-me {
+    height: 500px;
+    width: 100%;
+    background-color: var(--gray);
+    color: var(--dark-blue);
+}
+
+.contact-me p {
+    font-size: 30px;
+    font-family: var(--title-font);
+    text-align: center;
+}
+
+#contact-me-title {
+    padding-top: 150px;
+    background-color: var(--gray);
+    color: var(--dark-blue);
+}
+
+footer {
+    height: 100px;
+    background-color: var(--dark-blue);
+    text-align: center;
+}
+
+.logo-footer img {
+    height: 90px;
+    width: 100px;
+}
