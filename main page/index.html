@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/app/app.js"></script>
 </head>
 <body>
 
     <header>
-        <h1 class="logo">
+        <h1 class="logo" id="logo">
             <a href="#who-am-i">
                <img src="/assets/images/logo-no-background.svg" alt="logo"> 
             </a>
@@ -21,104 +20,114 @@
 
         <nav class="nav-bar">
             <ul>
-                <li><a href="#">Quem sou eu</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Depoimentos</a></li>
-                <li><a href="#" id="main-link">Aula Experimental</a></li>
+                <li><a href="#me" onclick="navScroll('me')">Quem sou eu</a></li>
+                <li><a href="#courses">Cursos</a></li>
+                <li><a href="#students">Depoimentos</a></li>
+                <li><a href="#contact" onclick="navScroll('contact')" id="main-link">Aula Experimental</a></li>
             </ul>
 
         </nav>
     </header>
 
     <main>
-        <section class="who-am-i">
+        <section class="who-am-i" id="me">
             <div id="container-img">
                 <img src="/assets/images/work-4.jpg" alt="selfie">
             </div>
             <div id="container-text">
                 <h2>Nice to meet you</h2>
                 <p>Professor há mais de 10 anos, acredito que a educação de qualidade pode abrir portas e trazer oportunidades incríveis àqueles que se empenham nos estudos.</p>
-                <button onclick="expandText()" type="button" id="expand">Conheça minha história</button>
+                <button onclick="openMyStory()" type="button" id="expand">Conheça minha história</button>
 
-                <div id="myStory">
-                    <p>
-                    Natural de Afonso Cláudio, uma pequena cidade da Região Serrana do Espírito Santo, comecei a estudar Inglês, assim como muitos, na 5a série em uma escola pública do Ensino Fundamental. 
-
-                    Sendo aluno destaque daquele ano, fui indicado a uma bolsa de estudos de uma escola de idiomas de minha cidade, onde o meu conhecimento da língua disparou e, a cada semestre estudado, fiquei cada vez melhor. 
-                    
-                    Aos 17 e 18 anos, participei do processo seletivo de Jovens Embaixadores, um programa anual da Embaixada dos EUA no Brasil, que seleciona jovens estudantes do Ensino Médio do país inteiro para fazer intercâmbio. Na minha segunda tentativa, fiquei em 2o lugar no ES, sendo contemplado com uma imersão de inglês em Brasília, o English Immersion Program, no ano de 2010.
-                    
-                    Nesse ano também, consegui meu primeiro emprego formal como professor, em uma escola privada de ensino regular, dando aulas para turmas do Ensino Fundamental II e Ensino Médio.
-                    
-                    Aos 20, fui convidado a ter uma experiência como professor da escola de idiomas aonde concluía o módulo Avançado. Comecei com apenas uma turma com poucos alunos.
-                    
-                    Os anos foram se passando e tive diversas outras oportunidades de lecionar, em diferentes contextos: particular, escola pública, escola bilíngue, e, finalmente, online.
-                    
-                    Tendo ingressado no ensino online desde 2018, já pude ajudar vários alunos a alcançarem seus objetivos em relação ao idioma: passar em entrevistas de emprego, conseguir boa pontuação em testes, fazer um trabalho da faculdade e, até mesmo, morar fora.
-                    
-                    Tenho muito orgulho de ser Teacher e de ver o sucesso dos meus students. Saber que pude contribuir para realizarem seus sonhos me deixa muito feliz. E aí, bora estudar comigo também?
-                    </p>
+                <div id="myStory" class="my-story--disabled">
+                    <div class="modal">
+                        <div class="close-modal"><span onclick="closeMyStory()">X</span></div>
+                        <div class="content-modal">
+                            <p>
+                                Natural de Afonso Cláudio, uma pequena cidade da Região Serrana do Espírito Santo, comecei a estudar Inglês, assim como muitos, na 5a série em uma escola pública do Ensino Fundamental. 
+            
+                                Sendo aluno destaque daquele ano, fui indicado a uma bolsa de estudos de uma escola de idiomas de minha cidade, onde o meu conhecimento da língua disparou e, a cada semestre estudado, fiquei cada vez melhor. 
+            
+                                Aos 17 e 18 anos, participei do processo seletivo de Jovens Embaixadores, um programa anual da Embaixada dos EUA no Brasil, que seleciona jovens estudantes do Ensino Médio do país inteiro para fazer intercâmbio. Na minha segunda tentativa, fiquei em 2o lugar no ES, sendo contemplado com uma imersão de inglês em Brasília, o English Immersion Program, no ano de 2010.
+                                
+                                Nesse ano também, consegui meu primeiro emprego formal como professor, em uma escola privada de ensino regular, dando aulas para turmas do Ensino Fundamental II e Ensino Médio.
+                                
+                                Aos 20, fui convidado a ter uma experiência como professor da escola de idiomas aonde concluía o módulo Avançado. Comecei com apenas uma turma com poucos alunos.
+                                
+                                Os anos foram se passando e tive diversas outras oportunidades de lecionar, em diferentes contextos: particular, escola pública, escola bilíngue, e, finalmente, online.
+                                
+                                Tendo ingressado no ensino online desde 2018, já pude ajudar vários alunos a alcançarem seus objetivos em relação ao idioma: passar em entrevistas de emprego, conseguir boa pontuação em testes, fazer um trabalho da faculdade e, até mesmo, morar fora.
+                                
+                                Tenho muito orgulho de ser Teacher e de ver o sucesso dos meus students. Saber que pude contribuir para realizarem seus sonhos me deixa muito feliz. E aí, bora estudar comigo também?
+                                </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
             
         </section>
 
-        <h2 id="courses-title">Cursos</h2> <!--inserir esse título dentro da section courses-->
+         <!--inserir esse título dentro da section courses-->
 
-        <section class="courses">
+        <section class="courses" id="courses">
+            <h2 id="courses-title">Cursos</h2>
+
+            <div class="cards-div">
+                <div class="container-cards">
+                    <div class="card-course" id="card-1">
+                        <div class="course-img"> <img src="/assets/images/basic-student-img.jpg" alt=""></div>
+                        <h3 class="course-name">Básico</h3>
+                        <p class="course-text">Para os primeiros contatos com o idioma; Indicado para os que só estudaram inglês de escola regular e/ou fizeram aulas particulares por um curto período.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container-cards">
+                    <div class="card-course" id="card-2">
+                        <img src="/assets/images/intermediate-student-img.jpg" alt="" class="course-img">
+                        <h3 class="course-name">Intermediário</h3>
+                        <p class="course-text">Para quem já possui conhecimento básico, tem vocabulário suficiente para se apresentar, pedir uma refeição ou se hospedar em um hotel sem problemas, por exemplo. Aqui, iremos aprofundar os tópicos já vistos e estender ainda mais a capacidade de comunicação.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container-cards">
+                    <div class="card-course" id="card-3">
+                        <img src="/assets/images/advanced-student-img.jpg" alt="" class="course-img">
+                        <h3 class="course-name">Avançado</h3>
+                        <p class="course-text">Sabe se virar bem em diversas situações, consegue falar sobre seus assuntos preferidos, mas trava na hora de explicar conceitos mais complexos? Esse é o nível para você chegar ao patamar de fluência aonde poderá encarar praticamente qualquer desafio do idioma.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container-cards">
+                    <div class="card-course" id="card-4">
+                        <img src="/assets/images/business-student-img.jpg" alt="" class="course-img">
+                        <h3 class="course-name">Business English</h3>
+                        <p class="course-text">Seja para entrar no mercado, garantir uma promoção, participar de reuniões com empresários de qualquer parte do mundo, ou até mesmo para expandir sua marca para muitos países, o Business English é o módulo voltado para negócios que você precisa.</p>
+                    </div>
+                    
+                </div>
+            </div>
             
-
-            <div class="container-cards">
-                <div class="card-course" id="card-1">
-                    <img src="/assets/images/basic-student-img.jpg" alt="" class="course-img">
-                    <h3 class="course-name">Básico</h3>
-                    <p class="course-text">Para os primeiros contatos com o idioma; Indicado para os que só estudaram inglês de escola regular e/ou fizeram aulas particulares por um curto período.</p>
-                </div>
-                
-            </div>
-
-            <div class="container-cards">
-                <div class="card-course" id="card-2">
-                    <img src="/assets/images/intermediate-student-img.jpg" alt="" class="course-img">
-                    <h3 class="course-name">Intermediário</h3>
-                    <p class="course-text">Para quem já possui conhecimento básico, tem vocabulário suficiente para se apresentar, pedir uma refeição ou se hospedar em um hotel sem problemas, por exemplo. Aqui, iremos aprofundar os tópicos já vistos e estender ainda mais a capacidade de comunicação.</p>
-                </div>
-                
-            </div>
-
-            <div class="container-cards">
-                <div class="card-course" id="card-3">
-                    <img src="/assets/images/advanced-student-img.jpg" alt="" class="course-img">
-                    <h3 class="course-name">Avançado</h3>
-                    <p class="course-text">Sabe se virar bem em diversas situações, consegue falar sobre seus assuntos preferidos, mas trava na hora de explicar conceitos mais complexos? Esse é o nível para você chegar ao patamar de fluência aonde poderá encarar praticamente qualquer desafio do idioma.</p>
-                </div>
-                
-            </div>
-
-            <div class="container-cards">
-                <div class="card-course" id="card-4">
-                    <img src="/assets/images/business-student-img.jpg" alt="" class="course-img">
-                    <h3 class="course-name">Business English</h3>
-                    <p class="course-text">Seja para entrar no mercado, garantir uma promoção, participar de reuniões com empresários de qualquer parte do mundo, ou até mesmo para expandir sua marca para muitos países, o Business English é o módulo voltado para negócios que você precisa.</p>
-                </div>
-                
-            </div>
         </section>
 
-        <section class="students">
+        <section class="students" id="students">
             <h2 id="depo-title">Depoimentos</h2>
 
-            <div class="sts-depo-container">
-                 <div class="sts-depo">
-                <figure>
-                    <img src="/assets/images/depo-carlos-pic.png" alt="alunos" class="depo-picture">
-                    <figcaption>Carlos Victor,<br>Técnico de Automação Comercial</figcaption>   
-                </figure>
-                <div class="card-depo">
-                    <img src="/assets/images/depo-carlos.png" alt="depoimentos" class="depo-print">
+            <div class="students-wrapper">
+                
+                <div class="sts-depo">
+                    <figure>
+                        <img src="/assets/images/depo-carlos-pic.png" alt="alunos" class="depo-picture">
+                        <figcaption>Carlos Victor,<br>Técnico de Automação Comercial</figcaption>   
+                    </figure>
+                    <div class="card-depo">
+                        <img src="/assets/images/depo-carlos.png" alt="depoimentos" class="depo-print">
+                    </div>
                 </div>
-            </div>
+
 
             <div class="sts-depo">
                 <figure>
@@ -144,10 +153,10 @@
             
         </section>
 
-        <section class="contact-me">
+        <section class="contact-me" id="contact">
             <h2 id="contact-me-title">Entre em contato:</h2>
             <div class="phone-number-container">
-                <a href="https://api.whatsapp.com/send?phone=5527998953099&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental." target="_blank"><i class="fa fa-whatsapp" style="font-size:30px"></i> WhatsApp: (27) 99895-3099</a>
+                <a href="https://api.whatsapp.com/send?phone=5527998953099&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20aula%20experimental." target="_blank"><i class="fa fa-whatsapp" style="font-size:30px"></i><span>WhatsApp: (27) 99895-3099</span></a>
             </div>
 
             <div class="email-container">
@@ -164,5 +173,23 @@
         </h1>
     </footer>
 
+
 </body>
+<script src="/app/app.js"></script>
 </html>
+
+
+ <!-- 
+    XXX Clicar e no botao inicial e abrir Modal.
+    2- Responsividade 
+    XXX Corrigir titulo para dentro das sections
+    XXX Navegação pelos nav-buttons do header
+    5- Animação para renderização dos depoimentos
+    XXX Z-Index do header tem que ser maior que todos
+  -->
+
+  
+ <!-- 
+    1- Animação modal.
+  -->
+ 
