@@ -209,10 +209,13 @@ figure figcaption {
     color: var(--dark-blue);
 }
 
-.contact-me p {
+.contact-me a {
     font-size: 30px;
     font-family: var(--title-font);
-    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 #contact-me-title {
