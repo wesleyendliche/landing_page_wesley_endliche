@@ -94,11 +94,6 @@ header,
     background-color: var(--dark-blue);
 }
 
-.teste {
-    width: 100%;   
-    background-image: url('../images/work-4.jpg');
-}
-
 img {
     width: 100%;
 }
@@ -110,7 +105,7 @@ img {
 .who-am-i {
     display: flex;
     align-items: center;
-    height: 605px;
+    height: 500px;
     width: 100%;
 }
 
@@ -335,6 +330,7 @@ figure figcaption {
 }
 
 .contact-me {
+    padding-top: 20px;
     height: 500px;
     width: 100%;
     background-color: var(--gray);
