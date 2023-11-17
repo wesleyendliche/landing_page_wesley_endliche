@@ -339,6 +339,8 @@ figure figcaption {
     width: 100%;
     background-color: var(--gray);
     color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
 }
 
 .contact-me a {
